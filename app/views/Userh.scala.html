@@ -1,0 +1,21 @@
+@(message: String,value : String)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@message</title>
+    </head>
+    <body>
+        <div>这是我的第一个paly程序！</div><br>
+        <div>@value</div><br>
+        <div>点击按钮协值转跳到下一个request
+          <form action="getName" method="post">
+              姓名：<input type="text" name="name">  <br>
+              年龄：<input type="text" name="age">  <br>
+              备注：<input type="text" name="text">  <br>
+              <input type="submit" value="提交">
+          </form>
+        </div>
+    </body>
+</html>

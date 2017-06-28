@@ -1,0 +1,23 @@
+@(message: String)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HELLO WORD</title>
+    </head>
+    <body>
+        <div>刚刚的值：  @message</div><br>
+        <div>111</div><br>
+        <div>点击按钮协值转跳到下一页面测试session 以及 http 带值路由功能
+            <form action="getSession2" method="post">
+                id：<input type="text" name="id">  <br>
+                <input type="submit" value="提交">
+                <a href="getSession/111">click me have id </a>
+            </form>
+        </div>
+            <br>
+        <div>点击测试 流式的HTTP响应 （下载） 功能
+            <a href="download">click me have a download </a>
+        </div>
+    </body>
+</html>

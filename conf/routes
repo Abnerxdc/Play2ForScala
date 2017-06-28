@@ -1,0 +1,24 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+#设置http路由
+#http://www.tuicool.com/articles/q6ZjMz
+#Play支持所有Http请求方法，包括 GET , POST , PUT , DELETE , HEAD 等
+#可以设置传递的值  /user ：value
+
+GET     /user                       controllers.User.index
+
+POST     /getName                   controllers.GetValue.index
+
+GET      /getSession/:id                controllers.GetSessionValue.show(id : String)
+
+POST      /getSession2                controllers.GetSessionValue.demo
+
+GET      /download                    controllers.GetSessionValue.download
