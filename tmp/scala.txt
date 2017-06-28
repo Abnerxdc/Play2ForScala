@@ -1,0 +1,27 @@
+import java.sql.{Connection, DriverManager}
+
+object JDBCDemo extends App{
+  def main(args: Array[String]): Unit = {
+    val url = "jdbc:mysql://localhost:3306/mydatabase"
+    val driver = "com.mysql.jdbc.Driver"
+    val username = "root"
+    val password = "xu5219"
+    val sql = "select * from mytable"
+    var connection:Connection = _
+    try{
+      Class.forName(driver)
+      connection = DriverManager.getConnection(url,username,password)
+      val statement = connection.createStatement
+      val rs = statement.executeQuery(sql)
+      while (rs.next()){
+        val id=rs.getString(1)
+        val name = rs.getString(2)
+        println(id,password)
+
+      }
+    }catch {
+      case e :Exception =>e.printStackTrace()
+    }
+    connection.close
+  }
+}
